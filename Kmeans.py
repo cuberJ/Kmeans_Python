@@ -48,11 +48,11 @@ def CentralPointUpdate(data):  # 更新K个聚类中心
         x = sumx / len(Ans[key])
         y = sumy / len(Ans[key])
         minDis = MAXDIS
-        newCentral = key
+        newCentral = (x, y)
 
-        for j in Ans[key]:  # 遍历每个聚类中心所划分到的点
-            if(DisCount(j[0], x, j[1], y) < minDis):
-                newCentral = j
+#        for j in Ans[key]:  # 遍历每个聚类中心所划分到的点
+#            if(DisCount(j[0], x, j[1], y) < minDis):
+#                newCentral = j
         if newCentral[0] != key[0] and newCentral[1] != key[1]:
             #print("发生了改变")
             #print(newCentral[0], key[0], newCentral[1], key[1])
